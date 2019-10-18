@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Pacifico|Vibur|ZCOOL+KuaiLe');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+/*font-family: 'Nanum Pen Script', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Vibur', cursive;
+font-family: 'ZCOOL KuaiLe', cursive;*/
+html{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+}
+
+html * {
+    box-sizing: inherit;
+}
+
+*:before, *:after {
+    content: " ";
+}
+/*body checked*/
+body {
+   
+    background-color: black;
+     -webkit-perspective: 1000px;
+          perspective: 1000px;
+    color: #fff;   
+    margin: 0;
+    text-align: center;
+}
+h2 {
+    display: block;
+    position: absolute;
+    font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
+    font-size: 30px;
+    color: #ED6353;
+    cursor: pointer;
+    top:12px;
+    left: 30%;
+    
+}
+.card {
+    position: absolute;
+    top:20%;
+    left: 50%;
+    margin-left: -175px;
+    width: 350px;
+    height: 470px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all ease-in-out 1s; 
+    
+}
+/*card page checked*/
+.card .page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin:0 0;
+    transform-origin: 0 0;       
+}
+
+/* card page checked*/
+.card .cover {
+    z-index: 2;
+    -webkit-transform: rotateY(-30deg);
+    transform: rotateY(-30deg);
+     backface-visibility: hidden;
+    transition: transform ease-in-out 1.4s, -webkit-transform ease-in-out 1.4s;
+    z-index: 5;
+}
+
+
+.card .cover .content {
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F2C975;
+  
+    z-index: 3;      
+}
+.backface {
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F2C975;
+     -webkit-transform: rotateY(-30deg);
+    transform: rotateY(-30deg);
+    transform-origin: 0 0; 
+    transition: transform ease-in-out 1.4s;
+    z-index: 2;
+}
+
+/* not content??*/
+/*
+.card .cover:after {
+    position: absolute;
+    top 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    background: rgba(255, 0, 0, 0.3);
+     -webkit-transform: skew(-8deg) rotateX(-10deg);
+          transform: skew(-8deg) rotateX(-10deg);
+    z-index: -1;
+}
+*/
+
+.card .cover .merrywrap {
+    position: absolute;
+    top: 175px;
+    left:0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: #ED6353;
+    z-index: 6;
+}
+.giftbox{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left:50%;
+    margin-left: -150px;
+    bottom: 40px;
+    z-index: 10;
+    
+}
+.giftbox > div {
+    background: #1C3341;
+    position: absolute;
+}
+.giftbox > div:after, .giftbox > div:before {
+    position: absolute;
+    content: "";
+    top: 0;
+}
+.giftbox:after {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+   /*content: "Click Me!";*/
+    left: 0;
+    bottom:0;
+    font-size: 24px;
+    text-align: center;
+    transform: rotate(-20deg);
+    transform-origin: 0 0;
+}
+
+.giftbox .coverPart {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 25%;
+    z-index: 2;   
+}
+
+.giftbox .coverPart:before {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    width: 50px;
+    transform: translateX(-50%);
+    background: #fdc56d;
+}
+.giftbox .coverPart > div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+  
+        
+}
+.giftbox .coverPart > div:before, .giftbox .coverPart > div:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: inset 0 0 0 15px #fdc56d;
+    border-radius: 30px;
+    transform-origin: 50% 100%;
+}
+
+.giftbox .coverPart > div:before {
+   transform: translateX(-45%) skewY(40deg);       
+}
+.giftbox .coverPart > div:after {
+    transform:translateX(45%) skewY(-40deg);
+}
+.giftbox .box {
+    right: 5%;
+    left: 5%;
+    height: 80%;
+    bottom: 0;
+}
+.giftbox .box:before {
+    width: 50px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fdc56d;
+}
+.giftbox .box:after {
+    width: 100%;
+    height: 30px;
+    left: 0;
+    background: rgba(0,0,0, 0.2);
+}
+
+
+
+.card .inside {
+  z-index: 1;
+  -webkit-transform: rotateY(-8deg);
+          transform: rotateY(-8deg);
+}
+
+.card .inside .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #008773;
+  z-index: 3;
+}
+
+.card .inside:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+     background-color: rgba(0, 0, 0, 0.3);
+     -webkit-transform: skew(-8deg) rotateX(-10deg);
+          transform: skew(-8deg) rotateX(-10deg);
+     z-index: -1;    
+}
+
+/*??!!*/
+.card.open {
+  margin-left: -20px;
+}
+
+.card.open .cover {
+    -webkit-transform: rotateY(-175deg);
+     transform: rotateY(-175deg);   
+}
+.card.open .backface {
+    -webkit-transform: rotateY(-175deg);
+     transform: rotateY(-175deg);   
+}
+
+.t-text {
+    position: absolute;
+    top: 30px;
+    width:100%;
+}
+
+.b-text {
+    position:absolute;
+    bottom: 30px;
+    width:100%;
+}
+
+.hb {
+    margin-top: 120px;
+    background: #005C4E;
+    display: inline-block;
+    font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+}
+.hb h2{
+    display: inline-block;
+    margin-top: 200px;
+    margin-left: -10px;
+    animation: wobble 0.5s linear infinite forwards;
+   
+}
+.hb h2 a {
+    text-decoration: none;
+    color: #ED6353;
+}
+
+
+.hb::after, .hb::before {
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: depth 6s -1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+          animation: depth 6s -1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+}
+.hb::after {
+ 
+  -webkit-background-clip: text;/*??*/
+
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: translate3d(0px, 16px, 0px) scale(0.9);
+          transform: translate3d(0px, 16px, 0px) scale(0.9);
+  z-index: -1;
+}
+.hb::before {
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: translate3d(0px, 32px, 0px) scale(0.8);
+          transform: translate3d(0px, 32px, 0px) scale(0.8);
+  z-index: -2;
+}
+
+@keyframes depth {
+  50% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+@keyframes wobble {
+  25% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+
+
+/*
+.hb::after, .hb::before {
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: depth 6s -1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+          animation: depth 6s -1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+}
+.hb::after {
+  background:red;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: translate3d(0px, 16px, 0px) scale(0.9);
+          transform: translate3d(0px, 16px, 0px) scale(0.9);
+  z-index: -1;
+}
+.hb::before {
+  background:red;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: translate3d(0px, 32px, 0px) scale(0.8);
+          transform: translate3d(0px, 32px, 0px) scale(0.8);
+  z-index: -2;
+}
+
+@-webkit-keyframes depth {
+  50% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+@keyframes depth {
+  50% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+/* the translateX help to position at the right place
+** concepte layer
+
+
+*/
